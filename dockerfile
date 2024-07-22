@@ -16,9 +16,9 @@ RUN ln -fs /usr/share/zoneinfo/Asia/Seoul /etc/localtime && dpkg-reconfigure --f
 # GitHub Actions Runner 다운로드 및 설치
 RUN mkdir -p /actions-runner
 WORKDIR /actions-runner
-RUN curl -o actions-runner-linux-x64-2.285.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.285.0/actions-runner-linux-x64-2.285.0.tar.gz \
-    && tar xzf ./actions-runner-linux-x64-2.285.0.tar.gz \
-    && rm ./actions-runner-linux-x64-2.285.0.tar.gz
+RUN curl -o actions-runner-linux-x64-2.317.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.317.0/actions-runner-linux-x64-2.317.0.tar.gz\
+    && tar xzf ./actions-runner-linux-x64-2.317.0.tar.gz \
+    && rm ./actions-runner-linux-x64-2.317.0.tar.gz
 
 # Dotnet Core 3.0 종속성 설치
 RUN ./bin/installdependencies.sh
